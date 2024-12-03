@@ -26,6 +26,4 @@ routes.post('/viewprofile',viewprofile)
 routes.get('/changepass',changepass)
 routes.post('/changepassword',changepassword)
 
-
-
 module.exports=routes

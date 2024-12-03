@@ -8,9 +8,9 @@ app.set('view engine', 'ejs')
 
 const path = require('path')
 
-const cookieparser=require('cookie-parser')
+const cookieParser = require('cookie-parser');
 
-app.use(cookieparser())
+app.use(cookieParser())
 
 
 
@@ -35,8 +35,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(passport.setUser);
 app.use(express.urlencoded())
+app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/', require('./routes/indexroutes'))
-app.use('/', express.static(path.join(__dirname, '/public')))
 app.listen(port, (err) => {
     if (err) {
         console.log(err);

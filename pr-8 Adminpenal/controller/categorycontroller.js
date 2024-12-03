@@ -1,5 +1,5 @@
 const categoryPage=(req, res)=>{
-return res.render('from')
+return res.render('category/from')
 }
 
 module.exports={

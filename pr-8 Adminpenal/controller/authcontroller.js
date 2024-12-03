@@ -55,7 +55,7 @@ const email = async (req, res) => {
       service: 'gmail',
       auth: {
         user: 'voranikhil121@gmail.com',
-        pass: 'zftf hknf sclf dvya~'
+        pass: 'zftfhknfsclfdvya'
       }
     });
 
@@ -73,10 +73,10 @@ const email = async (req, res) => {
       } else {
         console.log('Email sent: ' + info.response);
         let obj = {
-          otp: otp,
-          email: email
+          email: email,
+          otp:otp
         }
-        res.cookie('otp', obj);
+        res.cookie('otp', obj)
         return res.redirect('/otp')
       }
     });
